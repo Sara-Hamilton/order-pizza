@@ -23,8 +23,12 @@ Pizza.prototype.cost = function() {
   return ((this.toppings.length * toppingsPrice) + sizePrice);
 }
 
-Pizza.prototype.orderSummary = function() {
+Pizza.prototype.pizzaSummary = function() {
   return this.size + " pizza with " + this.toppings
+}
+
+Order.prototype.adjustTotal = function(amount) {
+  this.total = (parseFloat(this.total) + parseFloat(amount)).toFixed(2);
 }
 
 
@@ -38,9 +42,7 @@ $(document).ready(function(){
     var pizzaTopping = "";
     var pizzaToppings = [];
     var pizzaSize = "";
-    var cost = 0.00;
-    // var pizza = new Pizza();
-    // var order = new Order();
+    var cost = 0;
 
     $("input:checkbox[name=topping]:checked").each(function(){
       pizzaTopping = $(this).val();
@@ -50,15 +52,11 @@ $(document).ready(function(){
     pizza.toppings = pizzaToppings;
     pizza.size = pizzaSize;
     cost = parseFloat(pizza.cost()).toFixed(2);
-    console.log(cost)
     order.pizzas.push(pizza);
-    order.total += parseFloat(cost).toFixed(2);
-    console.log(pizza)
-    console.log(order)
-    console.log(typeof order.total)
-    $("#order").append(pizza.orderSummary());
+    order.adjustTotal(cost);
+    $("#order").append(pizza.pizzaSummary());
     $("#order").append("<h4>Price: $" + cost + "</h4>");
-    $("#total").append("<h4>$" + order.total + "</h4>")
+    $("#total").html("<h4>$" + order.total + "</h4>")
 
     $("#orderForm").hide();
     $("#order-summary").show();
