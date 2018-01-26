@@ -16,8 +16,8 @@
 
       <div class="row">
         <div class="col-md-6">
-          <h3>Place your order:</h3>
           <form id="orderForm">
+            <h3>Place your order:</h3>
             <div class="form-group">
               <label for="size">Select a size:</label>
               <select class="form-control" id="size">
@@ -43,8 +43,14 @@
         <div class="col-md-6" id="order-summary">
           <div class="well" id="order">
 
-          <h3>Your order: </h3>
+            <h3>Your order: </h3>
           </div>
+          <div id="total" class="well">
+            <h3>Order Total: </h3>
+          </div>
+
+          <button id="order-more" type="button" class="btn btn-primary">Order More Pizza</button>
+          <button id="checkout" type="button" class="btn btn-primary">Checkout and Pay</button>
 
       </div>
 
