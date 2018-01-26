@@ -1,8 +1,4 @@
-#order-summary {
-  display: none;
-}
-
-#customerForm {
+#order-summary, #customerForm, #contact-info {
   display: none;
 }
 
