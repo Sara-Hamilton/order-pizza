@@ -10,6 +10,15 @@ function Order() {
   this.name = "";
 }
 
+function Customer(firstName, lastName, street, city, state, zipcode) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.street = street;
+  this.city = city;
+  this.state = state;
+  this.zipcode = zipcode;
+}
+
 Pizza.prototype.cost = function() {
   var toppingsPrice = .75;
   var sizePrice = "";
@@ -66,4 +75,21 @@ $(document).ready(function(){
     $("#orderForm").trigger("reset");
     $("#orderForm").show();
   })
+
+  $("#checkout").click(function(){
+    $("#customerForm").show();
+  });
+
+  $("#customerForm").submit(function(event){
+    event.preventDefault();
+
+    var firstName = $("input#first-name").val();
+    var lastName = $("input#last-name").val();
+    var street = $("input#street").val();
+    var city = $("input#city").val();
+    var state = $("input#state").val();
+    var zipcode = $("input#zipcode").val();
+
+    var customer = new Customer(firstName, lastName, street, city, state, zipcode);
+  });
 });
