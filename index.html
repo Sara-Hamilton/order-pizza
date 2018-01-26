@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Order Pizza</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Portland's Best Pizza</h1>
-      </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <form id="orderForm">
-            <h3>Place your order:</h3>
-            <div class="form-group">
-              <label for="size">Select a size:</label>
-              <select class="form-control" id="size">
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Order Pizza</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Portland's Best Pizza</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <form id="orderForm">
+          <h3>Place your order:</h3>
+          <div class="form-group">
+            <label for="size">Select a size:</label>
+            <select class="form-control" id="size">
                 <option value="Small">Small (8" across) $7.99</option>
                 <option value="Medium">Medium (12" across) $12.99</option>
                 <option value="Large">Large (16" across) $15.99</option>
               </select>
-            </div>
-            <div class="form-group">
-              <label for="toppings">Choose your toppings:  $0.75 each</label><br>
-              <input type="checkbox" name="topping" value=" Pepperoni"> Pepperoni<br>
-              <input type="checkbox" name="topping" value=" Sausage"> Sausage<br>
-              <input type="checkbox" name="topping" value=" Onions"> Onions<br>
-              <input type="checkbox" name="topping" value=" Bell Peppers"> Bell Peppers<br>
-              <input type="checkbox" name="topping" value=" Black Olives"> Black Olives<br>
-              <input type="checkbox" name="topping" value=" Anchovies"> Anchovies<br>
-            </div>
-            <button id="order-button" type="submit" class="btn btn-primary">Place Your Order</button>
-
-          </form>
-
-        </div>
-        <div class="col-md-6" id="order-summary">
-          <div class="well" id="order">
-
-            <h3>Your order: </h3>
           </div>
-
-          <div class="well">
-            <h3>Order Total: </h3>
-            <div id="total">
-
-            </div>
+          <div class="form-group">
+            <label for="toppings">Choose your toppings:  $0.75 each</label><br>
+            <input type="checkbox" name="topping" value=" Pepperoni"> Pepperoni<br>
+            <input type="checkbox" name="topping" value=" Sausage"> Sausage<br>
+            <input type="checkbox" name="topping" value=" Onions"> Onions<br>
+            <input type="checkbox" name="topping" value=" Bell Peppers"> Bell Peppers<br>
+            <input type="checkbox" name="topping" value=" Black Olives"> Black Olives<br>
+            <input type="checkbox" name="topping" value=" Anchovies"> Anchovies<br>
           </div>
-
-          <button id="order-more" type="button" class="btn btn-primary">Order More Pizza</button>
-          <button id="checkout" type="button" class="btn btn-primary">Checkout and Pay</button>
-
+          <button id="order-button" type="submit" class="btn btn-primary">Place Your Order</button>
+        </form>
+        <form id="customerForm">
+          <h3>Enter your name and address for delivery.</h3>
+          <div class="form-group">
+            <label for="first-name">First name:</label>
+            <input id="first-name" class="form-control" type="text" required="true">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last name:</label>
+            <input id="last-name" class="form-control" type="text" required="true">
+          </div>
+          <div class="form-group">
+            <label for="street">Street:</label>
+            <input id="street" class="form-control" type="text" required="true">
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input id="city" class="form-control" type="text" required="true">
+          </div>
+          <div class="form-group">
+            <label for="state">State:</label>
+            <input id="state" class="form-control" type="text" required="true">
+          </div>
+          <div class="form-group">
+            <label for="zipcode">Zipcode:</label>
+            <input id="zipcode" class="form-control" type="number" required="true" min="10000">
+          </div>
+          <button id="customer-data" type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
-
+      <div class="col-md-6" id="order-summary">
+        <div class="well" id="order">
+          <h3>Order Summary: </h3>
+        </div>
+        <div class="well">
+          <h3>Order Total: </h3>
+          <div id="total">
+          </div>
+        </div>
+        <button id="order-more" type="button" class="btn btn-primary">Order More Pizza</button>
+        <button id="checkout" type="button" class="btn btn-primary">Checkout and Pay</button>
+      </div>
     </div>
+</body>
 
-  </body>
 </html>
