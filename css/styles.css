@@ -4,4 +4,12 @@
 
 .jumbotron {
   text-align: center;
+  opacity: .7;
+  margin-top: 20px;
+}
+
+body{
+  background-image: url("../img/pizza.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
