@@ -19,31 +19,30 @@
             <div class="form-group">
               <label for="size">Select a size:</label>
               <select class="form-control" id="size">
-                <option value="small">Small (8" across)</option>
-                <option value="medium">Medium (12" across)</option>
-                <option value="large">Large (16" across)</option>
+                <option value="Small">Small (8" across) $7.99</option>
+                <option value="Medium">Medium (12" across) $12.99</option>
+                <option value="Large">Large (16" across) $15.99</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="toppings">Choose your toppings: </label><br>
-              <input type="checkbox" name="topping" value="pepperoni"> Pepperoni<br>
-              <input type="checkbox" name="topping" value="sausage"> Sausage<br>
-              <input type="checkbox" name="topping" value="onions"> Onions<br>
-              <input type="checkbox" name="topping" value="bellPeppers"> Bell Peppers<br>
-              <input type="checkbox" name="topping" value="blackOlives"> Black Olives<br>
-              <input type="checkbox" name="topping" value="anchovies"> Anchovies<br>
+              <label for="toppings">Choose your toppings:  $0.75 each</label><br>
+              <input type="checkbox" name="topping" value=" Pepperoni"> Pepperoni<br>
+              <input type="checkbox" name="topping" value=" Sausage"> Sausage<br>
+              <input type="checkbox" name="topping" value=" Onions"> Onions<br>
+              <input type="checkbox" name="topping" value=" Bell Peppers"> Bell Peppers<br>
+              <input type="checkbox" name="topping" value=" Black Olives"> Black Olives<br>
+              <input type="checkbox" name="topping" value=" Anchovies"> Anchovies<br>
             </div>
-            <button type="submit" class="btn btn-primary">Place Your Order</button>
+            <button id="order-button" type="submit" class="btn btn-primary">Place Your Order</button>
 
           </form>
 
         </div>
-        <div class="col-md-6">
-          <div id="order-summary">
+        <div class="col-md-6" id="order-summary">
+          <div class="well" id="order">
 
+          <h3>Your order: </h3>
           </div>
-
-        </div>
 
       </div>
 
