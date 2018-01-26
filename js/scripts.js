@@ -1,20 +1,21 @@
 // business logic
-function Pizza {
-  this.toppings = [];
+function Pizza (toppings, size){
+  this.toppings = toppings;
   this.size = size;
 }
 
-Pizza.prototype.cost = function(toppings, size) {
+Pizza.prototype.cost = function() {
   var toppingsPrice = .75;
-  var sizePrice = 0;
-  if (size === personal) {
+  var sizePrice = "";
+  if (this.size === "small") {
     sizePrice = 7.99;
-  } else if (size === large) {
+  } else if (this.size === "medium") {
     sizePrice = 12.99;
-  } else if (size === family) {
+  } else if (this.size === "large") {
     sizePrice = 15.99;
   }
-  return ((toppings.length * toppingsPrice) + sizePrice))
+  console.log(sizePrice)
+  return ((this.toppings.length * toppingsPrice) + sizePrice);
 }
 
 
@@ -27,12 +28,19 @@ $(document).ready(function(){
     var pizzaToppings = [];
     var pizzaSize = "";
     var cost = 0;
+    var pizzaOrder = new Pizza();
 
     $("input:checkbox[name=topping]:checked").each(function(){
       pizzaTopping = $(this).val();
       pizzaToppings.push(pizzaTopping);
     });
     pizzaSize = $("select#size").val();
+    console.log(pizzaToppings)
+    console.log(pizzaSize)
+    pizzaOrder.toppings = pizzaToppings;
+    pizzaOrder.size = pizzaSize;
+    console.log(pizzaOrder)
+    console.log(pizzaOrder.cost())
 
   });
 });
