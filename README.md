@@ -55,7 +55,7 @@ _This is the Epicodus weekly project for week 3 of the Intro to Programming cour
 
 * _open in browser_
 
-view on [GitHub pages](https://sara-hamilton.github.io/pizza-order/)
+view on [GitHub pages](https://sara-hamilton.github.io/order-pizza/)
 
 ## Support and contact details
 
