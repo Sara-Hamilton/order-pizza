@@ -15,9 +15,9 @@ _This is the Epicodus weekly project for week 3 of the Intro to Programming cour
 * Displays the total cost of all pizzas ordered
 * Takes in the user's name and address
 * Displays an order summary consisting of the user's name and address, pizza descriptions, and prices
-* Contains a pizza object constructor with properties for topping and size.
+* Contains a pizza object constructor with properties for topping and size
 * Contains a prototype method for the cost of a pizza depending on the selections chosen
-* Contains additional object constructors, prototypes, and functions that are detailed in the additional specifications section of specifications
+* Contains additional object constructors, prototypes, and functions that are detailed in the Additional Specifications section of Specifications
 
 ### Specifications
 
