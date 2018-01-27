@@ -8,19 +8,20 @@
 
 _This is the Epicodus weekly project for week 3 of the Intro to Programming course.  Its purpose is to display understanding of object-oriented principles and prototypes in JavaScript._
 
-_Order Pizza:_
-* Allows the user to choose toppings and size for the pizza they'd like to order.
+#### _Order Pizza:_
+* Allows the user to choose toppings and size for the pizza they'd like to order
 * Gives the user the option of ordering more pizzas with the toppings and size of their choice
 * Displays a description of each pizza ordered and its price
 * Displays the total cost of all pizzas ordered
 * Takes in the user's name and address
 * Displays an order summary consisting of the user's name and address, pizza descriptions, and prices
-* Contains a pizza constructor object with properties for topping and size.
-* Contains a prototype method for the cost of a pizza depending on the selections chosen.
+* Contains a pizza object constructor with properties for topping and size.
+* Contains a prototype method for the cost of a pizza depending on the selections chosen
+* Contains additional object constructors, prototypes, and functions that are detailed in the additional specifications section of specifications
 
 ### Specifications
 
-Minimum Requirements:
+#### Minimum Requirements:
 * Pizza object constructor with properties for toppings and size
 
 * Prototype method for final cost of a pizza that takes toppings and size into consideration
@@ -29,7 +30,7 @@ Minimum Requirements:
 
 * Display total cost to user
 
-Additional Specifications:
+#### Additional Specifications:
 * Order object constructor with properties for pizzas, total, and customer
 
 * Customer object constructor with properties for first name, last name, street, city, state, and zipcode
