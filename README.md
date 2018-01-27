@@ -1,6 +1,6 @@
 # Order Pizza
 
-#### web app that allows the user to order a pizza with their choice of toppings and size and outputs the final cost, 1-26-18
+#### web app that allows the user to order any number of pizzas with their choice of toppings and size and outputs the final cost and an order summary, 1-26-18
 
 #### _By Sara Hamilton_
 
@@ -9,19 +9,42 @@
 _This is the Epicodus weekly project for week 3 of the Intro to Programming course.  Its purpose is to display understanding of object-oriented principles and prototypes in JavaScript._
 
 _Order Pizza:_
-* Allows the user to choose toppings and size for the pizza they's like to order.
+* Allows the user to choose toppings and size for the pizza they'd like to order.
+* Gives the user the option of ordering more pizzas with the toppings and size of their choice
+* Displays a description of each pizza ordered and its price
+* Displays the total cost of all pizzas ordered
+* Takes in the user's name and address
+* Displays an order summary consisting of the user's name and address, pizza descriptions, and prices
 * Contains a pizza constructor object with properties for topping and size.
 * Contains a prototype method for the cost of a pizza depending on the selections chosen.
 
 ### Specifications
 
-* Pizza Constructor object with properties for topping and size
+Minimum Requirements:
+* Pizza object constructor with properties for toppings and size
 
 * Prototype method for final cost of a pizza that takes toppings and size into consideration
 
 * User interface that allows the user to order a pizza and choose size and toppings
 
 * Display total cost to user
+
+Additional Specifications:
+* Order object constructor with properties for pizzas, total, and customer
+
+* Customer object constructor with properties for first name, last name, street, city, state, and zipcode
+
+* Prototype method for displaying a pizza's size and toppings
+
+* Prototype method for assigning a customer to an order
+
+* Prototype method for adjusting the total cost of an order
+
+* Prototype method for getting the combined first and last name of a customer
+
+* Prototype method for getting the address of a customer
+
+* Functions that allow for various forms and data to be hidden and/or shown
 
 ## Setup/Installation Requirements
 
