@@ -16,7 +16,7 @@ function Customer(firstName, lastName, street, city, state, zipcode) {
   this.street = street;
   this.city = city;
   this.state = state;
-  this.zipcode = zipcode;
+this.zipcode = zipcode;
 }
 
 Pizza.prototype.cost = function() {
@@ -97,7 +97,7 @@ $(document).ready(function() {
     newOrder.pizzas.push(newPizza);
     newOrder.adjustTotal(cost);
     $("#order").append(newPizza.pizzaSummary());
-    $("#order").append("<h4>Price: $" + cost + "</h4>");
+    $("#order").append("<h4>Price: $" + cost + "</h4><hr>");
     $("#total").html("<h4>$" + newOrder.total + "</h4>")
     displayOrderSummary();
   });
